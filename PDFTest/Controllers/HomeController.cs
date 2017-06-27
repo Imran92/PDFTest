@@ -21,7 +21,7 @@ namespace PDFTest.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult GetForm()
         {
             ViewBag.Message = "Your contact page.";
 
