@@ -1,0 +1,19 @@
+﻿@model PDFTest.ViewModels.PdfSubmitModel
+@{
+    Layout = null;
+    var submittedModel = this.Model;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormSubmit</title>
+</head>
+<body>
+    <div>
+        You Have Submitted the value @submittedModel.AInput
+    </div>
+</body>
+</html>
