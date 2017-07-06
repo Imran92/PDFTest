@@ -22,7 +22,8 @@ namespace PDFTest.ViewModels
         public bool HomeboundSevereSob { get; set; }
         public bool HomeboundDependentUponAdaptiveDevice { get; set; }
         public bool HomeboundMedicalRestrictions { get; set; }
-        public string HomeboundMedicalRestrictionsSpecify { get; set; }
+        public bool HomeboundOther { get; set; }
+        public string HomeboundOtherSpecify { get; set; }
 
 
         public bool SkilledObservationMentalNoChange { get; set; }
@@ -52,6 +53,33 @@ namespace PDFTest.ViewModels
         public bool SkilledObservationLying { get; set; }
         public bool SkilledObservationStanding { get; set; }
         public bool SkilledObservationSitting { get; set; }
+        public string SkilledObservationWeight { get; set; }
+        public bool SkilledObservationWeightActual { get; set; }
+        public bool SkilledObservationWeightReported { get; set; }
+        public string SkilledObservationSugar { get; set; }
+        public bool SkilledObservationSugarActual { get; set; }
+        public bool SkilledObservationSugarReported { get; set; }
+        public string SkilledObservationSkin { get; set; }
+        public bool SkilledObservationBreathClear { get; set; }
+        public bool SkilledObservationBreathCrackles { get; set; }
+        public bool SkilledObservationBreathRhonchi { get; set; }
+        public string SkilledObservationBreathOther { get; set; }
+        public string SkilledObservationOxygen { get; set; }
+        public bool SkilledObservationBowelActive { get; set; }
+        public bool SkilledObservationBowelAbsent { get; set; }
+        public bool SkilledObservationBowelHypoactive { get; set; }
+        public string SkilledObservationBowelQuadrants { get; set; }
+        public string SkilledObservationLastBM { get; set; }
+        public bool SkilledObservationLastBMIncontinence { get; set; }
+        public bool SkilledObservationLastBMDiarrhea { get; set; }
+        public bool SkilledObservationLastBMConstipation { get; set; }
+        public bool SkilledObservationLastBMImpaction { get; set; }
+        public bool SkilledObservationPainNone { get; set; }
+        public bool SkilledObservationPainSame { get; set; }
+        public bool SkilledObservationPainImproved { get; set; }
+        public bool SkilledObservationPainWorse { get; set; }
+        public string SkilledObservationPainOrigin { get; set; }
+        public string SkilledObservationPainLocation { get; set; }
 
 
         public string SkilledObservationHearing { get; set; }

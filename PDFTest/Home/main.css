@@ -392,7 +392,32 @@
     width: 659px;
     margin-right: 150px;
     margin-left: -8px;
+    height: 40px;
+    font-size: 45px;
+    border: none;
+}
+.InputField2{
+    width: 659px;
+    margin-right: 150px;
+    margin-left: -3px;
+    height: 40px;
+    font-size: 45px;
+    border-top: none;
+    border-left: none;
+    border-bottom: solid;
+}
+.MediumInputField{
+    width: 150px;
+    border-top: none;
+    border-left: none;
+    border-bottom: solid;
     height: 42px;
+    font-size: 45px;
+    
+}
+.CheckInputField{
+    width: 30px;
+    height: 35px;
     font-size: 45px;
     border: none;
 }
