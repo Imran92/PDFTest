@@ -68,6 +68,7 @@ namespace PDFTest.ViewModels
         public bool SkilledObservationBowelActive { get; set; }
         public bool SkilledObservationBowelAbsent { get; set; }
         public bool SkilledObservationBowelHypoactive { get; set; }
+        public bool SkilledObservationBowelHyperactive { get; set; }
         public string SkilledObservationBowelQuadrants { get; set; }
         public string SkilledObservationLastBM { get; set; }
         public bool SkilledObservationLastBMIncontinence { get; set; }
@@ -96,16 +97,22 @@ namespace PDFTest.ViewModels
         public bool CardiopulmonaryPedalEdema2 { get; set; }
         public bool CardiopulmonaryPedalEdema3 { get; set; }
         public bool CardiopulmonaryPedalEdema4 { get; set; }
+        public bool CardiopulmonaryPedalPulseBool { get; set; }
         public string CardiopulmonaryPedalPulses { get; set; }
         public bool CardiopulmonaryPedalPulsesAbsent { get; set; }
+        public bool CardiopulmonaryCough { get; set; }
         public bool CardiopulmonaryCoughNonProductive { get; set; }
         public bool CardiopulmonaryCoughProductive { get; set; }
         public string CardiopulmonaryCoughColor { get; set; }
         public string CardiopulmonaryCoughCharacter { get; set; }
-        public bool CardiopulmonaryDyspenia { get; set; }
+        public bool CardiopulmonaryDyspnea { get; set; }
         public bool CardiopulmonaryOrthopnea { get; set; }
         public bool CardiopulmonaryCyanosis { get; set; }
+        public bool CardiopulmonaryOxygen { get; set; }
         public string CardiopulmonaryOxygenLitres { get; set; }
+        public bool CardiopulmonaryOxygenNc { get; set; }
+        public bool CardiopulmonaryOxygenMask { get; set; }
+        public bool CardiopulmonaryOxygenTrach { get; set; }
         public bool CardiopulmonaryPRN { get; set; }
         public string CardiopulmonaryComments { get; set; }
         public string CardiopulmonaryTrachType { get; set; }
@@ -117,17 +124,20 @@ namespace PDFTest.ViewModels
 
 
         public bool NeuromuscularNoProblem { get; set; }
-        public bool Peerla { get; set; }
+        public bool NeuromuscularPeerla { get; set; }
+        public bool NeuromuscularOtherCheck { get; set; }
         public string NeuromuscularOther { get; set; }
-        public bool DecreasedSensation { get; set; }
-        public bool Tremors { get; set; }
-        public bool Headache { get; set; }
-        public bool GraspRightEqual { get; set; }
-        public bool GraspRightUnequal { get; set; }
-        public string GraspRightOther { get; set; }
-        public bool GraspLeftEqual { get; set; }
-        public bool GraspLeftUnequal { get; set; }
-        public string GraspLeftOther { get; set; }
+        public bool NeuromuscularDecreasedSensation { get; set; }
+        public bool NeuromuscularTremors { get; set; }
+        public bool NeuromuscularHeadache { get; set; }
+        public bool NeuromuscularGraspRightEqual { get; set; }
+        public bool NeuromuscularGraspRightUnequal { get; set; }
+        public bool NeuromuscularGraspRightOtherCheck { get; set; }
+        public string NeuromuscularGraspRightOther { get; set; }
+        public bool NeuromuscularGraspLeftEqual { get; set; }
+        public bool NeuromuscularGraspLeftUnequal { get; set; }
+        public bool NeuromuscularGraspLeftOtherCheck { get; set; }
+        public string NeuromuscularGraspLeftOther { get; set; }
         public bool NeuromuscularNumbness { get; set; }
         public bool NeuromuscularVertigo { get; set; }
         public bool NeuromuscularSyncope { get; set; }
@@ -141,7 +151,9 @@ namespace PDFTest.ViewModels
         public bool NeuromuscularWeakness { get; set; }
         public bool NeuromuscularAdaptiveEquipment { get; set; }
         public string NeuromuscularAdaptiveEquipmentComment { get; set; }
-        public string NeuromuscularComments { get; set; }
+        public string NeuromuscularComments1 { get; set; }
+        public string NeuromuscularComments2 { get; set; }
+        public string NeuromuscularComments3 { get; set; }
 
 
         public bool GastrointestinalAnorexia { get; set; }

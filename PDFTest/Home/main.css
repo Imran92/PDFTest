@@ -406,6 +406,16 @@
     border-left: none;
     border-bottom: solid;
 }
+.InputField3{
+    width: 659px;
+    margin-right: 20px;
+    margin-left: -3px;
+    height: 40px;
+    font-size: 45px;
+    border-top: none;
+    border-left: none;
+    border-bottom: solid;
+}
 .MediumInputField{
     width: 150px;
     border-top: none;
