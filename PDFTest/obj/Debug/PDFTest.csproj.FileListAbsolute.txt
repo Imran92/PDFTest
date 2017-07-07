@@ -162,3 +162,17 @@ C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\Microsoft.Owin.S
 C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\obj\Debug\PDFTest.csprojResolveAssemblyReference.cache
 C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\obj\Debug\PDFTest.dll
 C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\obj\Debug\PDFTest.pdb
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\NReco.PdfGenerator.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\RazorEngine.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\NReco.PdfGenerator.xml
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\RazorEngine.xml
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\HtmlRenderer.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\HtmlRenderer.PdfSharp.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\PdfSharp.Charting.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\PdfSharp.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\HtmlRenderer.pdb
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\HtmlRenderer.PdfSharp.pdb
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\PdfSharp.xml
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\PdfSharp.Charting.xml
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\de\PdfSharp.resources.dll
+C:\Users\imran\Documents\Visual Studio 2015\PDFTest\PDFTest\bin\de\PdfSharp.Charting.resources.dll

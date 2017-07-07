@@ -1,4 +1,5 @@
-﻿using PDFTest.ViewModels;
+﻿using PDFTest.Services;
+using PDFTest.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace PDFTest.Controllers
 {
     public class HomeController : Controller
     {
+        PdfService _pdfService;
+        public HomeController()
+        {
+            _pdfService = new PdfService();
+        }
         public ActionResult Index()
         {
             return View();
@@ -29,6 +35,7 @@ namespace PDFTest.Controllers
         }
         public ActionResult FormSubmit(PdfSubmitModel model)
         {
+            _pdfService.GeneratePdf(ControllerContext,model);
             return View(model);
         }
     }

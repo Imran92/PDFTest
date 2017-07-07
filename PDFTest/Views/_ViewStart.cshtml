@@ -1,7 +1,7 @@
 ﻿@{
     var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
     var action = HttpContext.Current.Request.RequestContext.RouteData.Values["Action"].ToString();
-    if (action.ToLower() != "getform")
+    if (action.ToLower() != "getform" && action.ToLower() != "formsubmit")
     {
         Layout = "~/Views/Shared/_Layout.cshtml";
     }

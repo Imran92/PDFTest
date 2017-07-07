@@ -7,6 +7,7 @@ namespace PDFTest.ViewModels
 {
     public class PdfSubmitModel
     {
+        public string filePath { get; set; }
         public string PatientName { get; set; }
         public string Date { get; set; }
 
@@ -154,6 +155,7 @@ namespace PDFTest.ViewModels
         public string NeuromuscularComments1 { get; set; }
         public string NeuromuscularComments2 { get; set; }
         public string NeuromuscularComments3 { get; set; }
+        public string NeuromuscularO2 { get; set; }
 
 
         public bool GastrointestinalAnorexia { get; set; }
