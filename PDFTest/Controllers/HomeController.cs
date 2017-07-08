@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Rotativa;
+using System.IO;
+using Rotativa.Options;
 
 namespace PDFTest.Controllers
 {
@@ -33,10 +36,15 @@ namespace PDFTest.Controllers
 
             return View();
         }
+        public ActionResult ViewForms(PdfSubmitModel model)
+        {
+            return View(model);
+        }
         public ActionResult FormSubmit(PdfSubmitModel model)
         {
             _pdfService.GeneratePdf(ControllerContext,model);
-            return View(model);
+            return RedirectToAction("ViewForms");
+            
         }
     }
 }
