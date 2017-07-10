@@ -338,6 +338,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\ViewForms.cshtml" />
     <Content Include="Views\Home\ViewForm.cshtml" />
+    <Content Include="Views\Home\NewForm.cshtml" />
+    <Content Include="Views\Home\NewForm2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

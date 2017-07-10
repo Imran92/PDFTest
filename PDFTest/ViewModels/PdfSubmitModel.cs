@@ -64,6 +64,7 @@ namespace PDFTest.ViewModels
         public bool SkilledObservationBreathClear { get; set; }
         public bool SkilledObservationBreathCrackles { get; set; }
         public bool SkilledObservationBreathRhonchi { get; set; }
+        public bool SkilledObservationBreathOtherCheck { get; set; }
         public string SkilledObservationBreathOther { get; set; }
         public string SkilledObservationOxygen { get; set; }
         public bool SkilledObservationBowelActive { get; set; }
