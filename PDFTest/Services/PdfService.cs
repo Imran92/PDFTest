@@ -24,7 +24,7 @@ namespace PDFTest.Services
         {
             
         }
-        public void GeneratePdf(ControllerContext context,PdfSubmitModel model)
+        public string GeneratePdf(ControllerContext context,PdfSubmitModel model)
         {
             string templateFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Views");
             //var htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
@@ -78,7 +78,9 @@ namespace PDFTest.Services
                 return "<span class='"+ classValue +"'>"+ fieldValue +"</span>";
             });
             var pdfBytes = new SynchronizedPechkin(new GlobalConfig()).Convert(result);
-            ByteArrayToFile(AppDomain.CurrentDomain.BaseDirectory + "TestPdf" + DateTime.Now.ToString("dd-MM-yy-hh-mm-ss-tt") + ".pdf", pdfBytes);
+            string fileName = AppDomain.CurrentDomain.BaseDirectory + "TestPdf" + DateTime.Now.ToString("dd-MM-yy-hh-mm-ss-tt") + ".pdf";
+            ByteArrayToFile(fileName, pdfBytes);
+            return fileName;
         }
         public bool ByteArrayToFile(string fileName, byte[] byteArray)
         {

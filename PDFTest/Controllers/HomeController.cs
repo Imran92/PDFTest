@@ -41,9 +41,19 @@ namespace PDFTest.Controllers
         }
         public ActionResult FormSubmit(PdfSubmitModel model)
         {
-            _pdfService.GeneratePdf(ControllerContext,model);
-            return RedirectToAction("ViewForms");
-            
+            string filepath = _pdfService.GeneratePdf(ControllerContext,model);
+            string filename = Path.GetFileName(filepath);
+            byte[] filedata = System.IO.File.ReadAllBytes(filepath);
+            string contentType = MimeMapping.GetMimeMapping(filepath);
+            var cd = new System.Net.Mime.ContentDisposition
+            {
+                FileName = filename,
+                Inline = true,
+            };
+
+            Response.AppendHeader("Content-Disposition", cd.ToString());
+
+            return File(filedata, contentType);
         }
     }
 }
