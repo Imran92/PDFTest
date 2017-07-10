@@ -118,9 +118,9 @@ namespace PDFTest.ViewModels
         public string CardiopulmonaryComments { get; set; }
         public string CardiopulmonaryTrachType { get; set; }
         public string CardiopulmonaryTrachSize { get; set; }
-        public bool CardiopulmonaryRR { get; set; }
-        public bool CardiopulmonaryTV { get; set; }
-        public bool CardiopulmonaryPEEP { get; set; }
+        public string CardiopulmonaryRR { get; set; }
+        public string CardiopulmonaryTV { get; set; }
+        public string CardiopulmonaryPEEP { get; set; }
 
 
 
