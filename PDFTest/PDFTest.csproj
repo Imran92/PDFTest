@@ -340,6 +340,8 @@
     <Content Include="Views\Home\ViewForm.cshtml" />
     <Content Include="Views\Home\NewForm.cshtml" />
     <Content Include="Views\Home\NewForm2.cshtml" />
+    <Content Include="Views\Home\NewForm3.cshtml" />
+    <Content Include="Views\Home\GetForm2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

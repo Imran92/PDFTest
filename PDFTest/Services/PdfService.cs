@@ -26,10 +26,17 @@ namespace PDFTest.Services
         }
         public void ChangeToCheckBox()
         {
-            var templateString = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "/Home/nursenewpdf.html");
+            var templateString = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "/Home/nursenewpdf2.html");
+            string pattern3 = "[_]{2,}";
             string pattern = "\\(<\\/span><span style=\"font - weight:normal\"> \\)|\\( \\)";
             Regex rgx = new Regex(pattern);
             string result = rgx.Replace(templateString, "(@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = \"CheckInputField\" }))");
+            result = Regex.Replace(result, pattern3, delegate (Match match)
+            {
+                string v = match.ToString();
+                int lengthOfDashes = v.Length;
+                return "@Html.TextBoxFor(m => m.PatientName, new { @class = \"TextInputField\", style=\"width:"+ lengthOfDashes*3 +"px; border-bottom: solid; border-left: none; border-right: none; border-top: none;\" })";
+            });
             int i = 0;
 
         }
@@ -40,7 +47,7 @@ namespace PDFTest.Services
             //var htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
             //var templateString = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "/Home/mypdffile45.html");
             //model.filePath = AppDomain.CurrentDomain.BaseDirectory;
-            var parsedResult = context.RenderPartialToString("NewForm2", model);
+            var parsedResult = context.RenderPartialToString("NewForm3", model);
             //System.IO.File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "Home/mypdffile99.html", parsedResult);
             //htmlToPdf.Quiet = false;
             //htmlToPdf.LogReceived += (sender, e) => {
@@ -79,13 +86,16 @@ namespace PDFTest.Services
             result = Regex.Replace(result, pattern3, delegate (Match match)
             {
                 string v = match.ToString();
-                int lastInvertComma = v.LastIndexOf("\"");
-                int lastEqual = v.LastIndexOf("=");
-                int firstInvertComma = v.IndexOf("\"");
-                int firstId = v.IndexOf("id");
-                string classValue = v.Substring(firstInvertComma + 1, firstId - firstInvertComma - 3);
-                string fieldValue = v.Substring(lastEqual + 2, lastInvertComma - lastEqual - 2);
-                return "<span class='"+ classValue +"'>"+ fieldValue +"</span>";
+                int styleIndex = v.IndexOf("style") + 7;
+                string afterStyleString = v.Substring(styleIndex);
+                int firstInvertComma = afterStyleString.IndexOf("\"");
+                string styleString = afterStyleString.Substring(0, firstInvertComma);
+                int valueIndex = v.IndexOf("value") + 7;
+                string afterValueString = v.Substring(valueIndex);
+                int firstInvertCommaAfterValue = afterValueString.IndexOf("\"");
+                string valueString = afterValueString.Substring(0, firstInvertCommaAfterValue);
+                
+                return "<span style=\""+ styleString + "\">"+ valueString + "</span>";
             });
             var pdfBytes = new SynchronizedPechkin(new GlobalConfig()).Convert(result);
             string fileName = AppDomain.CurrentDomain.BaseDirectory + "TestPdf" + DateTime.Now.ToString("dd-MM-yy-hh-mm-ss-tt") + ".pdf";

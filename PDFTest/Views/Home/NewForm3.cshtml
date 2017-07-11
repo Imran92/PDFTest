@@ -1,4 +1,4 @@
-@model PDFTest.ViewModels.PdfSubmitModel
+﻿@model PDFTest.ViewModels.PdfSubmitModel
 @{
     <html>
     <head>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="pos" id="_100:316" style="top:316;left:100">
                     <span id="_13.0" style=" font-family:Arial; font-size:13.0px; color:#000000">
-                        adaptive device(s) (@Html.CheckBoxFor(m => m.HomeboundMedicalRestrictions, new { @class = "CheckInputField" })) Medical restrictions (@Html.CheckBoxFor(m => m.HomeboundOther, new { @class = "CheckInputField" })) Other (specify)<span style="font-weight:bold"> ____________________________________</span>
+                        adaptive device(s) (@Html.CheckBoxFor(m => m.HomeboundMedicalRestrictions, new { @class = "CheckInputField" })) Medical restrictions (@Html.CheckBoxFor(m => m.HomeboundOther, new { @class = "CheckInputField" })) Other (specify)<span style="font-weight:bold"> @Html.TextBoxFor(m => m.PatientName, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:108px;  border-left: none; border-right: none; border-top: none;" })</span>
                     </span>
                 </div>
                 <div class="pos" id="_100:372" style="top:372;left:100">
@@ -77,82 +77,82 @@
                 </div>
                 <div class="pos" id="_100:429" style="top:429;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Vitals: Temperature ___________@Html.CheckBoxFor(m => m.SkilledObservationTemperatureOral, new { @class = "CheckInputField" })Oral,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureAxiliary, new { @class = "CheckInputField" })axillary,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureTympanic, new { @class = "CheckInputField" })tympanic,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureRectal, new { @class = "CheckInputField" })rectal Pulse:
+                        Vitals: Temperature @Html.TextBoxFor(m => m.SkilledObservationTemperature, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:33px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationTemperatureOral, new { @class = "CheckInputField" })Oral,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureAxiliary, new { @class = "CheckInputField" })axillary,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureTympanic, new { @class = "CheckInputField" })tympanic,@Html.CheckBoxFor(m => m.SkilledObservationTemperatureRectal, new { @class = "CheckInputField" })rectal Pulse:
                     </span>
                 </div>
                 <div class="pos" id="_100:449" style="top:449;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        ____________________@Html.CheckBoxFor(m => m.SkilledObservationPulseRadial, new { @class = "CheckInputField" })Radial,@Html.CheckBoxFor(m => m.SkilledObservationPulseApical, new { @class = "CheckInputField" })Apical,@Html.CheckBoxFor(m => m.SkilledObservationPulseBrachial, new { @class = "CheckInputField" })Brachial,@Html.CheckBoxFor(m => m.SkilledObservationPulseRegular, new { @class = "CheckInputField" })regular,@Html.CheckBoxFor(m => m.SkilledObservationPulseIrregular, new { @class = "CheckInputField" })irregular
+                        @Html.TextBoxFor(m => m.SkilledObservationTemperatureRectal, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:60px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationPulseRadial, new { @class = "CheckInputField" })Radial,@Html.CheckBoxFor(m => m.SkilledObservationPulseApical, new { @class = "CheckInputField" })Apical,@Html.CheckBoxFor(m => m.SkilledObservationPulseBrachial, new { @class = "CheckInputField" })Brachial,@Html.CheckBoxFor(m => m.SkilledObservationPulseRegular, new { @class = "CheckInputField" })regular,@Html.CheckBoxFor(m => m.SkilledObservationPulseIrregular, new { @class = "CheckInputField" })irregular
                     </span>
                 </div>
                 <div class="pos" id="_100:470" style="top:470;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Respirations: ______________@Html.CheckBoxFor(m => m.SkilledObservationRespirationRegular, new { @class = "CheckInputField" })regular,@Html.CheckBoxFor(m => m.SkilledObservationRespirationIrregular, new { @class = "CheckInputField" })irregular
+                        Respirations: @Html.TextBoxFor(m => m.SkilledObservationRespiration, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:42px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationRespirationRegular, new { @class = "CheckInputField" })regular,@Html.CheckBoxFor(m => m.SkilledObservationRespirationIrregular, new { @class = "CheckInputField" })irregular
                     </span>
                 </div>
                 <div class="pos" id="_100:490" style="top:490;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Blood Pressure: Right _______/________ Left ________/ ___________@Html.CheckBoxFor(m => m.SkilledObservationLying, new { @class = "CheckInputField" })Lying,@Html.CheckBoxFor(m => m.SkilledObservationStanding, new { @class = "CheckInputField" })standing,@Html.CheckBoxFor(m => m.SkilledObservationSitting, new { @class = "CheckInputField" })sitting
+                        Blood Pressure: Right @Html.TextBoxFor(m => m.SkilledObservationBpRight1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })/@Html.TextBoxFor(m => m.SkilledObservationBpRight2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:24px;  border-left: none; border-right: none; border-top: none;" }) Left @Html.TextBoxFor(m => m.SkilledObservationBpLeft1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:24px;  border-left: none; border-right: none; border-top: none;" })/ @Html.TextBoxFor(m => m.SkilledObservationBpLeft2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:33px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationLying, new { @class = "CheckInputField" })Lying,@Html.CheckBoxFor(m => m.SkilledObservationStanding, new { @class = "CheckInputField" })standing,@Html.CheckBoxFor(m => m.SkilledObservationSitting, new { @class = "CheckInputField" })sitting
                     </span>
                 </div>
                 <div class="pos" id="_100:510" style="top:510;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Weight: ______@Html.CheckBoxFor(m => m.SkilledObservationWeightActual, new { @class = "CheckInputField" })Actual,@Html.CheckBoxFor(m => m.SkilledObservationWeightReported, new { @class = "CheckInputField" })Reported
+                        Weight: @Html.TextBoxFor(m => m.SkilledObservationWeight, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:18px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationWeightActual, new { @class = "CheckInputField" })Actual,@Html.CheckBoxFor(m => m.SkilledObservationWeightReported, new { @class = "CheckInputField" })Reported
                     </span>
                 </div>
                 <div class="pos" id="_389:510" style="top:510;left:389">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Blood Sugar: _______@Html.CheckBoxFor(m => m.SkilledObservationSugarActual, new { @class = "CheckInputField" })Actual/@Html.CheckBoxFor(m => m.SkilledObservationSugarReported, new { @class = "CheckInputField" })Reported
+                        Blood Sugar: @Html.TextBoxFor(m => m.SkilledObservationSugar, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationSugarActual, new { @class = "CheckInputField" })Actual/@Html.CheckBoxFor(m => m.SkilledObservationSugarReported, new { @class = "CheckInputField" })Reported
                     </span>
                 </div>
                 <div class="pos" id="_100:531" style="top:531;left:100">
                     <span id="_15.6" style=" font-family:Arial; font-size:15.6px; color:#000000">
-                        Skin; (Temperature, Color, Turgor) ______________________________________
+                        Skin; (Temperature, Color, Turgor) @Html.TextBoxFor(m => m.SkilledObservationSkin, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:114px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:551" style="top:551;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Breath Sounds:@Html.CheckBoxFor(m => m.SkilledObservationBreathClear, new { @class = "CheckInputField" })Clear,@Html.CheckBoxFor(m => m.SkilledObservationBreathCrackles, new { @class = "CheckInputField" })Crackles/Rales,@Html.CheckBoxFor(m => m.SkilledObservationBreathRhonchi, new { @class = "CheckInputField" })Rhonchi/Wheeze @Html.CheckBoxFor(m => m.SkilledObservationBreathOtherCheck, new { @class = "CheckInputField" })Other: _______________
+                        Breath Sounds:@Html.CheckBoxFor(m => m.SkilledObservationBreathClear, new { @class = "CheckInputField" })Clear,@Html.CheckBoxFor(m => m.SkilledObservationBreathCrackles, new { @class = "CheckInputField" })Crackles/Rales,@Html.CheckBoxFor(m => m.SkilledObservationBreathRhonchi, new { @class = "CheckInputField" })Rhonchi/Wheeze @Html.CheckBoxFor(m => m.SkilledObservationBreathOtherCheck, new { @class = "CheckInputField" })Other: @Html.TextBoxFor(m => m.SkilledObservationBreathOther, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:45px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:571" style="top:571;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        O2 Saturation  ___________ %
+                        O2 Saturation  @Html.TextBoxFor(m => m.SkilledObservationOxygen, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:33px;  border-left: none; border-right: none; border-top: none;" }) %
                     </span>
                 </div>
                 <div class="pos" id="_100:592" style="top:592;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Bowel Sounds:@Html.CheckBoxFor(m => m.SkilledObservationBowelActive, new { @class = "CheckInputField" })Active/@Html.CheckBoxFor(m => m.SkilledObservationBowelAbsent, new { @class = "CheckInputField" })absent/@Html.CheckBoxFor(m => m.SkilledObservationBowelHypoactive, new { @class = "CheckInputField" })hypoactive/@Html.CheckBoxFor(m => m.SkilledObservationBowelHyperactive, new { @class = "CheckInputField" })hyperactive x ______ quadrants
+                        Bowel Sounds:@Html.CheckBoxFor(m => m.SkilledObservationBowelActive, new { @class = "CheckInputField" })Active/@Html.CheckBoxFor(m => m.SkilledObservationBowelAbsent, new { @class = "CheckInputField" })absent/@Html.CheckBoxFor(m => m.SkilledObservationBowelHypoactive, new { @class = "CheckInputField" })hypoactive/@Html.CheckBoxFor(m => m.SkilledObservationBowelHyperactive, new { @class = "CheckInputField" })hyperactive x @Html.TextBoxFor(m => m.SkilledObservationBowelQuadrants, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:18px;  border-left: none; border-right: none; border-top: none;" }) quadrants
                     </span>
                 </div>
                 <div class="pos" id="_100:612" style="top:612;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Last BM ____________________@Html.CheckBoxFor(m => m.SkilledObservationLastBMIncontinence, new { @class = "CheckInputField" })incontinence,@Html.CheckBoxFor(m => m.SkilledObservationLastBMDiarrhea, new { @class = "CheckInputField" })diarrhea,@Html.CheckBoxFor(m => m.SkilledObservationLastBMConstipation, new { @class = "CheckInputField" })constipation,@Html.CheckBoxFor(m => m.SkilledObservationLastBMImpaction, new { @class = "CheckInputField" })Impaction
+                        Last BM @Html.TextBoxFor(m => m.SkilledObservationLastBM, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:60px;  border-left: none; border-right: none; border-top: none;" })@Html.CheckBoxFor(m => m.SkilledObservationLastBMIncontinence, new { @class = "CheckInputField" })incontinence,@Html.CheckBoxFor(m => m.SkilledObservationLastBMDiarrhea, new { @class = "CheckInputField" })diarrhea,@Html.CheckBoxFor(m => m.SkilledObservationLastBMConstipation, new { @class = "CheckInputField" })constipation,@Html.CheckBoxFor(m => m.SkilledObservationLastBMImpaction, new { @class = "CheckInputField" })Impaction
                     </span>
                 </div>
                 <div class="pos" id="_100:632" style="top:632;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Pain:@Html.CheckBoxFor(m => m.SkilledObservationPainNone, new { @class = "CheckInputField" })None,@Html.CheckBoxFor(m => m.SkilledObservationPainSame, new { @class = "CheckInputField" })Same,@Html.CheckBoxFor(m => m.SkilledObservationPainImproved, new { @class = "CheckInputField" })improved,@Html.CheckBoxFor(m => m.SkilledObservationPainWorse, new { @class = "CheckInputField" })worse Origin: _________________ Location(s)
+                        Pain:@Html.CheckBoxFor(m => m.SkilledObservationPainNone, new { @class = "CheckInputField" })None,@Html.CheckBoxFor(m => m.SkilledObservationPainSame, new { @class = "CheckInputField" })Same,@Html.CheckBoxFor(m => m.SkilledObservationPainImproved, new { @class = "CheckInputField" })improved,@Html.CheckBoxFor(m => m.SkilledObservationPainWorse, new { @class = "CheckInputField" })worse Origin: @Html.TextBoxFor(m => m.SkilledObservationPainOrigin, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:51px;  border-left: none; border-right: none; border-top: none;" }) Location(s)
                     </span>
                 </div>
                 <div class="pos" id="_100:653" style="top:653;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        ___________________________
+                        @Html.TextBoxFor(m => m.SkilledObservationPainLocation, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:81px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:673" style="top:673;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Hearing: _______________________
+                        Hearing: @Html.TextBoxFor(m => m.SkilledObservationHearing, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:69px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_382:673" style="top:673;left:382">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Vision: _______________________
+                        Vision: @Html.TextBoxFor(m => m.SkilledObservationVision, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:69px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:693" style="top:693;left:100">
                     <span id="_15.2" style=" font-family:Arial; font-size:15.2px; color:#000000">
-                        Relief measures ___________________________
+                        Relief measures @Html.TextBoxFor(m => m.SkilledObservationReliefMeasures, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:81px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:716" style="top:716;left:100">
@@ -167,117 +167,117 @@
                 </div>
                 <div class="pos" id="_100:734" style="top:734;left:100">
                     <span id="_11.8" style=" font-family:Arial; font-size:11.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))No problem
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryNoProblem, new { @class = "CheckInputField" }))No problem
                     </span>
                 </div>
                 <div class="pos" id="_432:734" style="top:734;left:432">
                     <span id="_11.8" style=" font-family:Arial; font-size:11.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) No problem
+                        (@Html.CheckBoxFor(m => m.NeuromuscularNoProblem, new { @class = "CheckInputField" })) No problem
                     </span>
                 </div>
                 <div class="pos" id="_100:749" style="top:749;left:100">
                     <span id="_11.8" style=" font-family:Arial; font-size:11.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Chest pain/palpations
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryChestPain, new { @class = "CheckInputField" }))Chest pain/palpations
                     </span>
                 </div>
                 <div class="pos" id="_100:764" style="top:764;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Pedal Edema: LUE +1/+2/+3/+4 LLE +1/+2/+3/+4
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryPedalEdema, new { @class = "CheckInputField" })) Pedal Edema:@Html.CheckBoxFor(m => m.CardiopulmonaryPedalEdema1, new { @class = "CheckInputField" })LUE +1/+2/+3/+4 @Html.CheckBoxFor(m => m.CardiopulmonaryPedalEdema2, new { @class = "CheckInputField" })LLE +1/+2/+3/+4
                     </span>
                 </div>
                 <div class="pos" id="_432:764" style="top:764;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Pupils; (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) PERRLA (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Other: ___________________
+                        Pupils; (@Html.CheckBoxFor(m => m.NeuromuscularPeerla, new { @class = "CheckInputField" })) PERRLA (@Html.CheckBoxFor(m => m.NeuromuscularOtherCheck, new { @class = "CheckInputField" })) Other: @Html.TextBoxFor(m => m.NeuromuscularOther, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:57px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_193:779" style="top:779;left:193">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        RUE +1/+2/+3/+4 RLE +1/+2/+3/+4
+                        @Html.CheckBoxFor(m => m.CardiopulmonaryPedalEdema3, new { @class = "CheckInputField" })RUE +1/+2/+3/+4 @Html.CheckBoxFor(m => m.CardiopulmonaryPedalEdema4, new { @class = "CheckInputField" })RLE +1/+2/+3/+4
                     </span>
                 </div>
                 <div class="pos" id="_432:779" style="top:779;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Decreased Sensation (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Tremors (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Headache
+                        (@Html.CheckBoxFor(m => m.NeuromuscularDecreasedSensation, new { @class = "CheckInputField" })) Decreased Sensation (@Html.CheckBoxFor(m => m.NeuromuscularTremors, new { @class = "CheckInputField" }))Tremors (@Html.CheckBoxFor(m => m.NeuromuscularHeadache, new { @class = "CheckInputField" }))Headache
                     </span>
                 </div>
                 <div class="pos" id="_100:795" style="top:795;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Other: ______________________________
+                        Other: @Html.TextBoxFor(m => m.CardiopulmonaryPedalEdemaOther, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:90px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:810" style="top:810;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Pedal Pulses _______ present/absent
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryPedalPulseBool, new { @class = "CheckInputField" })) Pedal Pulses @Html.TextBoxFor(m => m.CardiopulmonaryPedalPulses, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })present/@Html.CheckBoxFor(m => m.CardiopulmonaryPedalPulsesAbsent, new { @class = "CheckInputField" })absent
                     </span>
                 </div>
                 <div class="pos" id="_432:810" style="top:810;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Grasp: Right (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Equal (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Unequal (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Other _________
+                        Grasp: Right (@Html.CheckBoxFor(m => m.NeuromuscularGraspRightEqual, new { @class = "CheckInputField" })) Equal (@Html.CheckBoxFor(m => m.NeuromuscularGraspRightUnequal, new { @class = "CheckInputField" })) Unequal (@Html.CheckBoxFor(m => m.NeuromuscularGraspRightOtherCheck, new { @class = "CheckInputField" })) Other @Html.TextBoxFor(m => m.NeuromuscularGraspRightOther, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:825" style="top:825;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Cough: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Nonproductive (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Productive
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryCough, new { @class = "CheckInputField" })) Cough: (@Html.CheckBoxFor(m => m.CardiopulmonaryCoughNonProductive, new { @class = "CheckInputField" })) Nonproductive (@Html.CheckBoxFor(m => m.CardiopulmonaryCoughProductive, new { @class = "CheckInputField" })) Productive
                     </span>
                 </div>
                 <div class="pos" id="_472:825" style="top:825;left:472">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Left (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Equal (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Unequal (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Other _________
+                        Left (@Html.CheckBoxFor(m => m.NeuromuscularGraspLeftEqual, new { @class = "CheckInputField" })) Equal (@Html.CheckBoxFor(m => m.NeuromuscularGraspLeftUnequal, new { @class = "CheckInputField" })) Unequal (@Html.CheckBoxFor(m => m.NeuromuscularGraspLeftOtherCheck, new { @class = "CheckInputField" })) Other @Html.TextBoxFor(m => m.NeuromuscularGraspLeftOther, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_116:840" style="top:840;left:116">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Color: ______________ Character: ______________
+                        Color: @Html.TextBoxFor(m => m.CardiopulmonaryCoughColor, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:42px;  border-left: none; border-right: none; border-top: none;" }) Character: @Html.TextBoxFor(m => m.CardiopulmonaryCoughCharacter, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:42px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:856" style="top:856;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Dyspnea (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Orthopnea (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Cyanosis
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryDyspnea, new { @class = "CheckInputField" })) Dyspnea (@Html.CheckBoxFor(m => m.CardiopulmonaryOrthopnea, new { @class = "CheckInputField" })) Orthopnea (@Html.CheckBoxFor(m => m.CardiopulmonaryCyanosis, new { @class = "CheckInputField" })) Cyanosis
                     </span>
                 </div>
                 <div class="pos" id="_432:856" style="top:856;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Numbness/Tingling (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Vertigo/Ataxia
+                        (@Html.CheckBoxFor(m => m.NeuromuscularNumbness, new { @class = "CheckInputField" })) Numbness/Tingling (@Html.CheckBoxFor(m => m.NeuromuscularVertigo, new { @class = "CheckInputField" })) Vertigo/Ataxia
                     </span>
                 </div>
                 <div class="pos" id="_100:871" style="top:871;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) O2 _____ liters/minute via NC/mask/trach
+                        (@Html.CheckBoxFor(m => m.NeuromuscularO2Check, new { @class = "CheckInputField" })) O2 @Html.TextBoxFor(m => m.NeuromuscularO2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:15px;  border-left: none; border-right: none; border-top: none;" }) liters/minute via NC/mask/trach
                     </span>
                 </div>
                 <div class="pos" id="_432:871" style="top:871;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Syncope
+                        (@Html.CheckBoxFor(m => m.NeuromuscularSyncope, new { @class = "CheckInputField" })) Syncope
                     </span>
                 </div>
                 <div class="pos" id="_116:886" style="top:886;left:116">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) PRN (Continuous)
+                        (@Html.CheckBoxFor(m => m.CardiopulmonaryPRN, new { @class = "CheckInputField" })) PRN (Continuous)
                     </span>
                 </div>
                 <div class="pos" id="_432:886" style="top:886;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))ambulates: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))independent, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Assist x1, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Equipment
+                        (@Html.CheckBoxFor(m => m.NeuromuscularAmbulates, new { @class = "CheckInputField" }))ambulates: (@Html.CheckBoxFor(m => m.NeuromuscularAmbulatesIndependent, new { @class = "CheckInputField" }))independent, (@Html.CheckBoxFor(m => m.NeuromuscularAmbulatesAssist, new { @class = "CheckInputField" })) Assist x1, (@Html.CheckBoxFor(m => m.NeuromuscularAmbulatesEquipment, new { @class = "CheckInputField" })) Equipment
                     </span>
                 </div>
                 <div class="pos" id="_100:901" style="top:901;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Comments: _________________________________
+                        Comments: @Html.TextBoxFor(m => m.CardiopulmonaryComments, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:99px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:901" style="top:901;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Balance: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) WNL (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Unsteady Gait
+                        Balance: (@Html.CheckBoxFor(m => m.NeuromuscularEquipmentBalanceWnl, new { @class = "CheckInputField" })) WNL (@Html.CheckBoxFor(m => m.NeuromuscularEquipmentBalanceUnsteady, new { @class = "CheckInputField" })) Unsteady Gait
                     </span>
                 </div>
                 <div class="pos" id="_100:917" style="top:917;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Trach Type: _________ Size _________
+                        Trach Type: @Html.TextBoxFor(m => m.CardiopulmonaryTrachType, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" }) Size @Html.TextBoxFor(m => m.CardiopulmonaryTrachSize, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:917" style="top:917;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Weakness
+                        (@Html.CheckBoxFor(m => m.NeuromuscularWeakness, new { @class = "CheckInputField" })) Weakness
                     </span>
                 </div>
                 <div class="pos" id="_100:932" style="top:932;left:100">
@@ -287,37 +287,37 @@
                 </div>
                 <div class="pos" id="_432:932" style="top:932;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Adaptive Equipment ________________
+                        (@Html.CheckBoxFor(m => m.NeuromuscularAdaptiveEquipment, new { @class = "CheckInputField" })) Adaptive Equipment @Html.TextBoxFor(m => m.NeuromuscularAdaptiveEquipmentComment, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:48px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:947" style="top:947;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        RR: _________
+                        RR: @Html.TextBoxFor(m => m.CardiopulmonaryRR, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:947" style="top:947;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Comments: ___________________________
+                        Comments: @Html.TextBoxFor(m => m.NeuromuscularComments1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:81px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:962" style="top:962;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        TV: __________
+                        TV: @Html.TextBoxFor(m => m.CardiopulmonaryTV, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:30px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:962" style="top:962;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        _____________________________________
+                        @Html.TextBoxFor(m => m.NeuromuscularComments2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:111px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:978" style="top:978;left:100">
                     <span id="_11.1" style=" font-family:Arial; font-size:11.1px; color:#000000">
-                        PEEP: ____________
+                        PEEP: @Html.TextBoxFor(m => m.CardiopulmonaryPEEP, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:36px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:978" style="top:978;left:432">
                     <span id="_11.1" style=" font-family:Arial; font-size:11.1px; color:#000000">
-                        _____________________________________
+                        @Html.TextBoxFor(m => m.NeuromuscularComments3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:111px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_0:0" style="top:1100">
@@ -325,7 +325,7 @@
                 </div>
                 <div class="pos" id="_100:1198" style="top:1198;left:100">
                     <span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-                        O2 : ________________________
+                        O2 : @Html.TextBoxFor(m => m.NeuromuscularO2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:72px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1214" style="top:1214;left:100">
@@ -340,62 +340,62 @@
                 </div>
                 <div class="pos" id="_100:1232" style="top:1232;left:100">
                     <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Anorexia (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Nausea/Vomiting (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Difficulty Swallowing
+                        (@Html.CheckBoxFor(m => m.GastrointestinalAnorexia, new { @class = "CheckInputField" })) Anorexia (@Html.CheckBoxFor(m => m.GastrointestinalNausea, new { @class = "CheckInputField" })) Nausea/Vomiting (@Html.CheckBoxFor(m => m.GastrointestinalDifficulty, new { @class = "CheckInputField" })) Difficulty Swallowing
                     </span>
                 </div>
                 <div class="pos" id="_432:1232" style="top:1232;left:432">
                     <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Burning (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Frequency/Urgency (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Retention/Hesitancy
+                        (@Html.CheckBoxFor(m => m.GenitourinaryBurning, new { @class = "CheckInputField" }))Burning (@Html.CheckBoxFor(m => m.GenitourinaryFrequency, new { @class = "CheckInputField" })) Frequency/Urgency (@Html.CheckBoxFor(m => m.GenitourinaryRetention, new { @class = "CheckInputField" })) Retention/Hesitancy
                     </span>
                 </div>
                 <div class="pos" id="_100:1247" style="top:1247;left:100">
                     <span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Tube Feeding (specify) ________________________
+                        (@Html.CheckBoxFor(m => m.GastrointestinalTube, new { @class = "CheckInputField" })) Tube Feeding (specify) @Html.TextBoxFor(m => m.GastrointestinalTubeSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:72px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1247" style="top:1247;left:432">
                     <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Odor (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Hematuria (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Incontinence
+                        (@Html.CheckBoxFor(m => m.GenitourinaryOdor, new { @class = "CheckInputField" })) Odor (@Html.CheckBoxFor(m => m.GenitourinaryHematuria, new { @class = "CheckInputField" }))Hematuria (@Html.CheckBoxFor(m => m.GenitourinaryIncontinence, new { @class = "CheckInputField" })) Incontinence
                     </span>
                 </div>
                 <div class="pos" id="_114:1262" style="top:1262;left:114">
                     <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Continuous (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Intermittent
+                        (@Html.CheckBoxFor(m => m.GastrointestinalTubeContinuous, new { @class = "CheckInputField" }))Continuous (@Html.CheckBoxFor(m => m.GastrointestinalTubeIntermittent, new { @class = "CheckInputField" })) Intermittent
                     </span>
                 </div>
                 <div class="pos" id="_432:1262" style="top:1262;left:432">
                     <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Catheter (specify) type _________French____ml/balloon
+                        (@Html.CheckBoxFor(m => m.GenitourinaryCatheter, new { @class = "CheckInputField" })) Catheter (specify) type @Html.TextBoxFor(m => m.GenitourinaryCatheterType, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })French @Html.TextBoxFor(m => m.GenitourinaryBulbInflated, new { @class = "TextInputField", style = "width:12px;  border-left: none; border-right: none; border-top: none;" })ml/balloon
                     </span>
                 </div>
                 <div class="pos" id="_100:1278" style="top:1278;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Comments: _________________________________
+                        Comments: @Html.TextBoxFor(m => m.GastrointestinalComment1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:99px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1278" style="top:1278;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Bulb inflated _____ml (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Changed (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Inserted (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Removed
+                        Bulb inflated @Html.TextBoxFor(m => m.GenitourinaryBulbInflated, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:15px;  border-left: none; border-right: none; border-top: none;" })ml (@Html.CheckBoxFor(m => m.GenitourinaryBulbChanged, new { @class = "CheckInputField" }))Changed (@Html.CheckBoxFor(m => m.GenitourinaryBulbInserted, new { @class = "CheckInputField" })) Inserted (@Html.CheckBoxFor(m => m.GenitourinaryBulbRemoved, new { @class = "CheckInputField" }))Removed
                     </span>
                 </div>
                 <div class="pos" id="_100:1293" style="top:1293;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        _____________________________________________
+                        @Html.TextBoxFor(m => m.GastrointestinalComment2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:135px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1293" style="top:1293;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Irrigated with (specify)__________________________
+                        Irrigated with (specify)@Html.TextBoxFor(m => m.GenitourinaryIrrigated, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:78px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1308" style="top:1308;left:100">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        _____________________________________________
+                        @Html.TextBoxFor(m => m.GastrointestinalComment3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:135px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1308" style="top:1308;left:432">
                     <span id="_11.4" style=" font-family:Arial; font-size:11.4px; color:#000000">
-                        Comments: ________________________________
+                        Comments: @Html.TextBoxFor(m => m.GenitourinaryComments, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:96px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1358" style="top:1358;left:100">
@@ -405,12 +405,12 @@
                 </div>
                 <div class="pos" id="_100:1372" style="top:1372;left:100">
                     <span id="_10.5" style=" font-family:Arial; font-size:10.5px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Not applicable/ostomy care
+                        (@Html.CheckBoxFor(m => m.WoundCareNotApplicable, new { @class = "CheckInputField" })) Not applicable/ostomy care
                     </span>
                 </div>
                 <div class="pos" id="_100:1386" style="top:1386;left:100">
                     <span id="_10.5" style=" font-family:Arial; font-size:10.5px; color:#000000">
-                        Wound care/dressing change performed by (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Self (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Nurse
+                        Wound care/dressing change performed by (@Html.CheckBoxFor(m => m.WoundSelf, new { @class = "CheckInputField" }))Self (@Html.CheckBoxFor(m => m.WoundNurse, new { @class = "CheckInputField" }))Nurse
                     </span>
                 </div>
                 <div class="pos" id="_439:1387" style="top:1387;left:439">
@@ -435,7 +435,7 @@
                 </div>
                 <div class="pos" id="_100:1399" style="top:1399;left:100">
                     <span id="_10.5" style=" font-family:Arial; font-size:10.5px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Caregiver/family member
+                        (@Html.CheckBoxFor(m => m.WoundCareGiver, new { @class = "CheckInputField" })) Caregiver/family member
                     </span>
                 </div>
                 <div class="pos" id="_439:1401" style="top:1401;left:439">
@@ -445,7 +445,7 @@
                 </div>
                 <div class="pos" id="_100:1413" style="top:1413;left:100">
                     <span id="_10.3" style=" font-family:Arial; font-size:10.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Soiled dressing removed/disposed of properly
+                        (@Html.CheckBoxFor(m => m.WoundCareDressingRemoved, new { @class = "CheckInputField" })) Soiled dressing removed/disposed of properly
                     </span>
                 </div>
                 <div class="pos" id="_439:1415" style="top:1415;left:439">
@@ -455,7 +455,7 @@
                 </div>
                 <div class="pos" id="_100:1427" style="top:1427;left:100">
                     <span id="_10.2" style=" font-family:Arial; font-size:10.2px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Wound cleaned (specify) ________________________
+                        (@Html.CheckBoxFor(m => m.WoundCareCleaned, new { @class = "CheckInputField" }))Wound cleaned (specify) @Html.TextBoxFor(m => m.WoundCareCleanedSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:72px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_439:1429" style="top:1429;left:439">
@@ -465,7 +465,7 @@
                 </div>
                 <div class="pos" id="_100:1440" style="top:1440;left:100">
                     <span id="_10.2" style=" font-family:Arial; font-size:10.2px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Wound irrigated (specify) _______________________
+                        (@Html.CheckBoxFor(m => m.WoundCareIrrigated, new { @class = "CheckInputField" })) Wound irrigated (specify) @Html.TextBoxFor(m => m.WoundCareIrrigatedSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:69px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_439:1444" style="top:1444;left:439">
@@ -475,7 +475,7 @@
                 </div>
                 <div class="pos" id="_100:1454" style="top:1454;left:100">
                     <span id="_10.1" style=" font-family:Arial; font-size:10.1px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Type of dressing(s) used ________________________
+                        (@Html.CheckBoxFor(m => m.WoundCareDressing, new { @class = "CheckInputField" })) Type of dressing(s) used @Html.TextBoxFor(m => m.WoundCareDressingType, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:72px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_439:1458" style="top:1458;left:439">
@@ -485,7 +485,7 @@
                 </div>
                 <div class="pos" id="_100:1467" style="top:1467;left:100">
                     <span id="_10.6" style=" font-family:Arial; font-size:10.6px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Wound debridement
+                        (@Html.CheckBoxFor(m => m.WoundCareDebridment, new { @class = "CheckInputField" })) Wound debridement
                     </span>
                 </div>
                 <div class="pos" id="_439:1472" style="top:1472;left:439">
@@ -495,7 +495,7 @@
                 </div>
                 <div class="pos" id="_100:1481" style="top:1481;left:100">
                     <span id="_10.4" style=" font-family:Arial; font-size:10.4px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Drainage collection container emptied. Volume ________
+                        (@Html.CheckBoxFor(m => m.WoundCareDrainage, new { @class = "CheckInputField" })) Drainage collection container emptied. Volume @Html.TextBoxFor(m => m.WoundCareDrainageCollectionVolume, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:24px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_439:1486" style="top:1486;left:439">
@@ -505,7 +505,7 @@
                 </div>
                 <div class="pos" id="_100:1494" style="top:1494;left:100">
                     <span id="_10.6" style=" font-family:Arial; font-size:10.6px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Patient tolerated procedure well
+                        (@Html.CheckBoxFor(m => m.WoundCareTolerated, new { @class = "CheckInputField" })) Patient tolerated procedure well
                     </span>
                 </div>
                 <div class="pos" id="_439:1501" style="top:1501;left:439">
@@ -515,17 +515,17 @@
                 </div>
                 <div class="pos" id="_100:1508" style="top:1508;left:100">
                     <span id="_10.6" style=" font-family:Arial; font-size:10.6px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Medicated prior to wound care
+                        (@Html.CheckBoxFor(m => m.WoundCareMedicated, new { @class = "CheckInputField" })) Medicated prior to wound care
                     </span>
                 </div>
                 <div class="pos" id="_100:1521" style="top:1521;left:100">
                     <span id="_10.6" style=" font-family:Arial; font-size:10.6px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Patient/family/caregiver instructed on wound
+                        (@Html.CheckBoxFor(m => m.WoundCareInstructed, new { @class = "CheckInputField" })) Patient/family/caregiver instructed on wound
                     </span>
                 </div>
                 <div class="pos" id="_432:1515" style="top:1515;left:432">
                     <span id="_9.9" style="font-weight:bold; font-family:Arial; font-size:9.9px; color:#000000">
-                        Comments: __________________________________
+                        Comments: @Html.TextBoxFor(m => m.WoundCommentLine1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:102px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1535" style="top:1535;left:100">
@@ -535,17 +535,17 @@
                 </div>
                 <div class="pos" id="_432:1528" style="top:1528;left:432">
                     <span id="_10.0" style="font-weight:bold; font-family:Arial; font-size:10.0px; color:#000000">
-                        ____________________________________________
+                        @Html.TextBoxFor(m => m.WoundCommentLine2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:132px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1549" style="top:1549;left:100">
                     <span id="_10.6" style=" font-family:Arial; font-size:10.6px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Patient/family/caregiver to perform wound care/ostomy/dressing
+                        (@Html.CheckBoxFor(m => m.WoundCarePerformChange, new { @class = "CheckInputField" })) Patient/family/caregiver to perform wound care/ostomy/dressing
                     </span>
                 </div>
                 <div class="pos" id="_432:1542" style="top:1542;left:432">
                     <span id="_10.0" style="font-weight:bold; font-family:Arial; font-size:10.0px; color:#000000">
-                        ____________________________________________
+                        @Html.TextBoxFor(m => m.WoundCommentLine3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:132px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1562" style="top:1562;left:100">
@@ -555,7 +555,7 @@
                 </div>
                 <div class="pos" id="_432:1556" style="top:1556;left:432">
                     <span id="_10.0" style="font-weight:bold; font-family:Arial; font-size:10.0px; color:#000000">
-                        ____________________________________________
+                        @Html.TextBoxFor(m => m.WoundCommentLine4, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:132px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1624" style="top:1624;left:100">
@@ -565,7 +565,7 @@
                 </div>
                 <div class="pos" id="_100:1642" style="top:1642;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Observe/Teach:
+                        (@Html.CheckBoxFor(m => m.InterventionsObserve, new { @class = "CheckInputField" })) Observe/Teach:
                     </span>
                 </div>
                 <div class="pos" id="_432:1642" style="top:1642;left:432">
@@ -575,102 +575,102 @@
                 </div>
                 <div class="pos" id="_100:1659" style="top:1659;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Disease Process (specify) _______________
+                        (@Html.CheckBoxFor(m => m.InterventionsProcess, new { @class = "CheckInputField" })) Disease Process (specify) @Html.TextBoxFor(m => m.InterventionsProcessSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:45px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1659" style="top:1659;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Tube feedings/Special diet: ___________________
+                        (@Html.CheckBoxFor(m => m.InterventionsTubeFeedings, new { @class = "CheckInputField" })) Tube feedings/Special diet: @Html.TextBoxFor(m => m.InterventionsTubeFeedingsSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:57px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1676" style="top:1676;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Diet: __________________
+                        (@Html.CheckBoxFor(m => m.InterventionsDiet, new { @class = "CheckInputField" })) Diet: @Html.TextBoxFor(m => m.InterventionsDietSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:54px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1676" style="top:1676;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        ________________________________________
+                        @Html.TextBoxFor(m => m.InterventionsTubeFeedingsSpecify2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:120px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1693" style="top:1693;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Safety: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Fall (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Medications (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Fire
+                        (@Html.CheckBoxFor(m => m.InterventionsSafety, new { @class = "CheckInputField" })) Safety: (@Html.CheckBoxFor(m => m.InterventionsSafetyFall, new { @class = "CheckInputField" }))Fall (@Html.CheckBoxFor(m => m.InterventionsSafetyMedications, new { @class = "CheckInputField" })) Medications (@Html.CheckBoxFor(m => m.InterventionsSafetyFire, new { @class = "CheckInputField" })) Fire
                     </span>
                 </div>
                 <div class="pos" id="_432:1693" style="top:1693;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Medication Administration: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) injections, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) GT/GJ,
+                        (@Html.CheckBoxFor(m => m.InterventionsMedication, new { @class = "CheckInputField" })) Medication Administration: (@Html.CheckBoxFor(m => m.InterventionsMedicationInjection, new { @class = "CheckInputField" })) injections, (@Html.CheckBoxFor(m => m.InterventionsMedicationGt, new { @class = "CheckInputField" })) GT/GJ,
                     </span>
                 </div>
                 <div class="pos" id="_100:1710" style="top:1710;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Other: _______________
+                        (@Html.CheckBoxFor(m => m.InterventionsOther, new { @class = "CheckInputField" })) Other: @Html.TextBoxFor(m => m.InterventionsOtherSpecify, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:45px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1710" style="top:1710;left:432">
                     <span id="_13.3" style=" font-family:Arial; font-size:13.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) nebulizer treatment (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) infusion
+                        (@Html.CheckBoxFor(m => m.InterventionsNebulizer, new { @class = "CheckInputField" })) nebulizer treatment (@Html.CheckBoxFor(m => m.InterventionsInfusion, new { @class = "CheckInputField" })) infusion
                     </span>
                 </div>
                 <div class="pos" id="_100:1727" style="top:1727;left:100">
                     <span id="_13.3" style=" font-family:Arial; font-size:13.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Pain Management
+                        (@Html.CheckBoxFor(m => m.InterventionsPain, new { @class = "CheckInputField" })) Pain Management
                     </span>
                 </div>
                 <div class="pos" id="_432:1727" style="top:1727;left:432">
                     <span id="_13.3" style=" font-family:Arial; font-size:13.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) medication purpose & Side effects:
+                        (@Html.CheckBoxFor(m => m.InterventionsMedicationPurpose, new { @class = "CheckInputField" })) medication purpose & Side effects:
                     </span>
                 </div>
                 <div class="pos" id="_100:1743" style="top:1743;left:100">
                     <span id="_13.3" style=" font-family:Arial; font-size:13.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Care of: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Terminally Ill, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Ventilator Dependent,
+                        (@Html.CheckBoxFor(m => m.InterventionsCare, new { @class = "CheckInputField" })) Care of: (@Html.CheckBoxFor(m => m.InterventionsTerminally, new { @class = "CheckInputField" })) Terminally Ill, (@Html.CheckBoxFor(m => m.InterventionsVentilator, new { @class = "CheckInputField" })) Ventilator Dependent,
                     </span>
                 </div>
                 <div class="pos" id="_432:1743" style="top:1743;left:432">
                     <span id="_13.3" style=" font-family:Arial; font-size:13.3px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Ambu bag use
+                        (@Html.CheckBoxFor(m => m.InterventionsAmbu, new { @class = "CheckInputField" })) Ambu bag use
                     </span>
                 </div>
                 <div class="pos" id="_100:1760" style="top:1760;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Tracheostomy Care (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))s/p CVA
+                        (@Html.CheckBoxFor(m => m.InterventionsTracheostomy, new { @class = "CheckInputField" })) Tracheostomy Care (@Html.CheckBoxFor(m => m.InterventionsCVA, new { @class = "CheckInputField" }))s/p CVA
                     </span>
                 </div>
                 <div class="pos" id="_432:1760" style="top:1760;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Oxygen tank use
+                        (@Html.CheckBoxFor(m => m.InterventionsOxygen, new { @class = "CheckInputField" })) Oxygen tank use
                     </span>
                 </div>
                 <div class="pos" id="_100:1777" style="top:1777;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) wound care, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Diabetes management, _______
+                        (@Html.CheckBoxFor(m => m.InterventionsWound, new { @class = "CheckInputField" })) wound care, (@Html.CheckBoxFor(m => m.InterventionsDiabetes, new { @class = "CheckInputField" })) Diabetes management, @Html.TextBoxFor(m => m.InterventionsDiabetesManagement1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1777" style="top:1777;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Ventilator settings and alarms
+                        (@Html.CheckBoxFor(m => m.InterventionsVentilator, new { @class = "CheckInputField" })) Ventilator settings and alarms
                     </span>
                 </div>
                 <div class="pos" id="_100:1794" style="top:1794;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        ___________________________________________
+                        @Html.TextBoxFor(m => m.InterventionsDiabetesManagement2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:129px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1794" style="top:1794;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Miscellaneous equipment________________
+                        (@Html.CheckBoxFor(m => m.InterventionsMiscellaneous, new { @class = "CheckInputField" })) Miscellaneous equipment @Html.TextBoxFor(m => m.InterventionsMiscellaneous1, new { @class = "TextInputField", style = "width:48px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1811" style="top:1811;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        ___________________________________________
+                        @Html.TextBoxFor(m => m.InterventionsDiabetesManagement3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:129px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_432:1811" style="top:1811;left:432">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        _________________________________________
+                        @Html.TextBoxFor(m => m.InterventionsMiscellaneous2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:123px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1849" style="top:1849;left:100">
@@ -680,57 +680,57 @@
                 </div>
                 <div class="pos" id="_100:1866" style="top:1866;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Care Plan: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Reviewed/Revised with patient involvement
+                        Care Plan: (@Html.CheckBoxFor(m => m.SummaryCarePlan, new { @class = "CheckInputField" })) Reviewed/Revised with patient involvement
                     </span>
                 </div>
                 <div class="pos" id="_103:1883" style="top:1883;left:103">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) Outcome achieved (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) PRN order obtained
+                        (@Html.CheckBoxFor(m => m.SummaryCarePlanOutcome, new { @class = "CheckInputField" })) Outcome achieved (@Html.CheckBoxFor(m => m.SummaryCarePlanPrn, new { @class = "CheckInputField" })) PRN order obtained
                     </span>
                 </div>
                 <div class="pos" id="_100:1900" style="top:1900;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))Discharge Planning Discussed
+                        (@Html.CheckBoxFor(m => m.SummaryCarePlanDischarge, new { @class = "CheckInputField" }))Discharge Planning Discussed
                     </span>
                 </div>
                 <div class="pos" id="_100:1917" style="top:1917;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Plan for next visit: ____________________________________________________________________
+                        Plan for next visit: @Html.TextBoxFor(m => m.SummaryCarePlanForVisit1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:204px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1934" style="top:1934;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        ____________________________________________________________________________________
+                        @Html.TextBoxFor(m => m.SummaryCarePlanPlanForVisit2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:252px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1951" style="top:1951;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        ____________________________________________________________________________________
+                        @Html.TextBoxFor(m => m.SummaryCarePlanPlanForVisit3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:252px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1968" style="top:1968;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Approximate next visit date: _______/_______/_________
+                        Approximate next visit date: @Html.TextBoxFor(m => m.SummaryCarePlanDate1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })/@Html.TextBoxFor(m => m.SummaryCarePlanDate2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:21px;  border-left: none; border-right: none; border-top: none;" })/@Html.TextBoxFor(m => m.SummaryCarePlanDate3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:27px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:1985" style="top:1985;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Next physician Date: _____/______/________
+                        Next physician Date: @Html.TextBoxFor(m => m.SummaryCarePlanPhysicianDate1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:15px;  border-left: none; border-right: none; border-top: none;" })/@Html.TextBoxFor(m => m.SummaryCarePlanPhysicianDate2, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:18px;  border-left: none; border-right: none; border-top: none;" })/@Html.TextBoxFor(m => m.SummaryCarePlanPhysicianDate3, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:24px;  border-left: none; border-right: none; border-top: none;" })
                     </span>
                 </div>
                 <div class="pos" id="_100:2002" style="top:2002;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Care coordination: (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) MD, (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) SN (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))PT (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) OT (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) ST (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))MSW (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) LPN/PDN (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" }))
+                        Care coordination: (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationMd, new { @class = "CheckInputField" })) MD, (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationSn, new { @class = "CheckInputField" })) SN (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationPt, new { @class = "CheckInputField" }))PT (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationOt, new { @class = "CheckInputField" })) OT (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationSt, new { @class = "CheckInputField" })) ST (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationMsw, new { @class = "CheckInputField" }))MSW (@Html.CheckBoxFor(m => m.SummaryCarePlanCoordinationLpn, new { @class = "CheckInputField" })) LPN/PDN (@Html.CheckBoxFor(m => m.SummaryCarePlanPdn, new { @class = "CheckInputField" }))
                     </span>
                 </div>
                 <div class="pos" id="_100:2019" style="top:2019;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Billable services recorded? (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) yes (@Html.CheckBoxFor(m => m.VisitTypeInitial, new { @class = "CheckInputField" })) No
+                        Billable services recorded? (@Html.CheckBoxFor(m => m.SummaryCarePlanBillableYes, new { @class = "CheckInputField" })) yes (@Html.CheckBoxFor(m => m.SummaryCarePlanBillableNo, new { @class = "CheckInputField" })) No
                     </span>
                 </div>
                 <div class="pos" id="_100:2036" style="top:2036;left:100">
                     <span id="_12.8" style=" font-family:Arial; font-size:12.8px; color:#000000">
-                        Nurses Signature/Title: ________________________________ Date:
+                        Nurses Signature/Title: @Html.TextBoxFor(m => m.WoundDrainage1, new { @class = "TextInputField", style = "border-bottom: solid; border-bottom-width: thin; font-size: 11.7px; background: transparent; width:96px;  border-left: none; border-right: none; border-top: none;" }) Date:
                     </span>
                 </div>
                 <div class="pos" id="_519:2036" style="top:2036;left:519">

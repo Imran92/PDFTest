@@ -157,6 +157,7 @@ namespace PDFTest.ViewModels
         public string NeuromuscularComments2 { get; set; }
         public string NeuromuscularComments3 { get; set; }
         public string NeuromuscularO2 { get; set; }
+        public bool NeuromuscularO2Check { get; set; }
 
 
         public bool GastrointestinalAnorexia { get; set; }
@@ -166,6 +167,9 @@ namespace PDFTest.ViewModels
         public string GastrointestinalTubeSpecify { get; set; }
         public bool GastrointestinalTubeContinuous { get; set; }
         public bool GastrointestinalTubeIntermittent { get; set; }
+        public string GastrointestinalComment1 { get; set; }
+        public string GastrointestinalComment2 { get; set; }
+        public string GastrointestinalComment3 { get; set; }
 
 
 
@@ -188,6 +192,8 @@ namespace PDFTest.ViewModels
 
         public bool WoundCareNotApplicable { get; set; }
         public bool WoundCareGiver { get; set; }
+        public bool WoundSelf { get; set; }
+        public bool WoundNurse { get; set; }
         public bool WoundCareDressingRemoved { get; set; }
         public bool WoundCareCleaned { get; set; }
         public string WoundCareCleanedSpecify { get; set; }
@@ -258,6 +264,7 @@ namespace PDFTest.ViewModels
         public string InterventionsDiabetesManagement3 { get; set; }
         public bool InterventionsTubeFeedings { get; set; }
         public string InterventionsTubeFeedingsSpecify { get; set; }
+        public string InterventionsTubeFeedingsSpecify2 { get; set; }
         public bool InterventionsMedication { get; set; }
         public bool InterventionsMedicationInjection { get; set; }
         public bool InterventionsMedicationGt { get; set; }
@@ -269,7 +276,7 @@ namespace PDFTest.ViewModels
         public bool InterventionsVentilatorSettings { get; set; }
         public bool InterventionsMiscellaneous { get; set; }
         public string InterventionsMiscellaneous1 { get; set; }
-        public bool InterventionsMiscellaneous2 { get; set; }
+        public string InterventionsMiscellaneous2 { get; set; }
 
         public bool SummaryCarePlan { get; set; }
         public bool SummaryCarePlanOutcome { get; set; }
